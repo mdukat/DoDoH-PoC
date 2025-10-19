@@ -21,6 +21,15 @@ go build .
 sudo ./DoDoH-PoC
 ```
 
+Or using Docker:
+
+```
+git clone https://github.com/mdukat/DoDoH-PoC.git
+cd DoDoH-PoC
+docker build -t dodoh-dns .
+docker run -p 127.4.4.4:53:53/udp dodoh-dns
+```
+
 ### NetworkManager configuration
 
 Simply change your DNS server configuration to `127.4.4.4`.
